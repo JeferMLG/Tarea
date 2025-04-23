@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link rel="stylesheet" href="skills.css" />
+</head>
+<body>
+  <!-- Header (igual que en Home) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><img src="images/IconoMain.png" alt="Icono"></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
+  </header>
+  <video autoplay muted loop id="videoFondo">
+    <source src="images/istockphoto-1402594148-640_adpp_is.mp4" type="video/mp4">
+  </video>
+
+
+  <!-- About Section -->
+  <section class="about-section">
+    <section id="skills">
+        <h2>Mis Habilidades</h2>
+        <div class="skill">
+            <span>Java</span>
+            <div class="skill-bar" data-skill="70%"></div>
+        </div>
+        <div class="skill">
+            <span>Python</span>
+            <div class="skill-bar" data-skill="90%"></div>
+        </div>
+        <div class="skill">
+            <span>JavaScript</span>
+            <div class="skill-bar" data-skill="70%"></div>
+        </div>
+        <div class="skill">
+            <span>Base de Datos</span>
+            <div class="skill-bar" data-skill="90%"></div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            
+            skillBars.forEach(bar => {
+                const skillLevel = bar.getAttribute('data-skill');
+                bar.style.width = skillLevel; // Cambia el ancho de la barra
+            });
+        });
+    </script>
+
+
+  </section>
+</body>
+</html>
